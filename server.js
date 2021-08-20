@@ -31,3 +31,9 @@ function checkTitleAndText (note) {
     }
     return true;   
 };
+// GET route, id = next index in array
+app.get('/api/notes', (req, res) => {
+    res.json(notes); 
+});
+app.post('/api/notes', (req, res) => {
+    req.body.id = notes.length.toString(); 
