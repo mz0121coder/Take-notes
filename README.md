@@ -1,7 +1,7 @@
 # Take-notes
   
 This is an Express-powered note taking app.  
-Users can write a new note by clicking the "+" icon on the top left of the notes page.  
+Users can write a new note by clicking the "+" icon on the top right of the notes page.  
 From there, they can input a valid title and text, then by clicking the save button, notes will be seen on the left column.  
 It is then possible to edit, delete and/or create more notes. 
 
