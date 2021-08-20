@@ -37,3 +37,11 @@ app.get('/api/notes', (req, res) => {
 });
 app.post('/api/notes', (req, res) => {
     req.body.id = notes.length.toString(); 
+    // Error message if note not properly enterred
+    if (!checkTitleAndText(req.body)) {
+        res.status(400).send('This note does not have the right format'); 
+    } else {
+        const note = writeNote(req.body, notes); 
+        res.json(note);
+    }
+});  
