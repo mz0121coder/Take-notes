@@ -21,3 +21,13 @@ function writeNote (body, previousNotesList) {
         JSON.stringify({notes : previousNotesList}, null, 2));
     return note; 
 };
+// Check if valid note title and text have been typed
+function checkTitleAndText (note) {
+    if (!note.title || typeof note.title !== 'string') {
+        return false; 
+    }
+    if (!note.text || typeof note.text !== "string") {
+        return false;
+    }
+    return true;   
+};
